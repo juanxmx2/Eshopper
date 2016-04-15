@@ -15,20 +15,21 @@ private $bd;
         return $datos;
     }
 
-     function Crear_Producto($nombres, $referencia, $precio, $cantidad, $disponible, $imagen){
+     function Crear_Producto($nombres, $referencia, $precio, $cantidad, $disponible, $imagen, $id){
 
      
 
       
             $this->bd->conectar();
-            $this->bd->set_Consulta("INSERT INTO producto(nombre,referencia,precio, cantidad, disponible, imagen)
+            $this->bd->set_Consulta("INSERT INTO producto(nombre,referencia,precio, cantidad, disponible, imagen, id_categoria)
                                             VALUES( 
                                                     '".$nombres."',
                                                     '".$referencia."',
                                                     '".$precio."',
                                                     '".$cantidad."',
                                                     '".$disponible."',
-                                                    '".$imagen."');");
+                                                    '".$imagen."',
+                                                    '".$id."');");
             $this->bd->desconectar();
              echo'  <script>
                 alert("Creacion de producto Satisfactorio");
@@ -68,9 +69,36 @@ private $bd;
 
   function cargar_productos(){
         $this->bd->conectar();
-        $consulta = $this->bd->set_Consulta("SELECT nombre, referencia, precio, cantidad, imagen
+        $consulta = $this->bd->set_Consulta("SELECT nombre, referencia, precio, cantidad, imagen, id_categoria
                                             FROM producto
                                             WHERE disponible = 1;");
+        $this->bd->desconectar();
+        return $consulta;
+    }
+
+      function cargar_categoria(){
+        $this->bd->conectar();
+        $consulta = $this->bd->set_Consulta("SELECT nombre_categoria
+                                            FROM categorias");
+        $this->bd->desconectar();
+        return $consulta;
+    }
+
+
+    function cargar_id($categoria){
+        $this->bd->conectar();
+        $consulta = $this->bd->set_Consulta("SELECT id_categoria
+                                            FROM categorias
+                                            WHERE nombre_categoria = '".$categoria."'");
+        $this->bd->desconectar();
+        return $consulta;
+    }
+
+     function cargar_categoria_con_id(){
+        $this->bd->conectar();
+        $consulta = $this->bd->set_Consulta("SELECT p.nombre, p.referencia, p.precio, p.cantidad, p.imagen,c.nombre_categoria,c.id_categoria
+                                            FROM categorias c
+                                            INNER JOIN producto p on p.id_categoria = c.id_categoria");
         $this->bd->desconectar();
         return $consulta;
     }
