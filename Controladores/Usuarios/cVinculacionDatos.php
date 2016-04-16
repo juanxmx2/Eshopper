@@ -8,10 +8,10 @@ require_once("../../Modelos/Usuarios/mVinculacionDatos.php");
 $user = new Vinculacion();
 
 
-    $user->vincular_datos(    	$_POST['identificacion'],
-    							$_POST['telefono'],
-    							$_POST['direccion'],
-    							$_POST['ciudad'],
+    $user->vincular_datos(    	strtoupper($_POST['identificacion']),
+    							strtoupper($_POST['telefono']),
+    							strtoupper($_POST['direccion']),
+    							strtoupper($_POST['ciudad']),
                                	$usuario
                                 
             );

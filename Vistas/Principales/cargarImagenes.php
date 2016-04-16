@@ -1,6 +1,8 @@
 <?php 
   require_once("../../Modelos/Productos/mProducto.php");
-
+    require_once("../../Modelos/Categorias/mCategoria.php");
+    
+    $categoria = new Categoria();
     $producto = new Producto();
 
  ?>
@@ -62,12 +64,12 @@
                               
                               $image = pg_escape_bytea($archivo);
                               
-                              $producto->cargar_id($_POST['categoria']);
+                              $categoria->cargar_id($_POST['categoria']);
 
-                              $tupla = $producto->datos();
+                              $tupla = $categoria->datos();
                               $id_categoria = $tupla[0];                       
 
-                              $producto->Crear_Producto(  $_POST['nombre'],
+                              $producto->Crear_Producto(  strtoupper($_POST['nombre']),
                                                           $_POST['referencia'], 
                                                           $_POST['precio'],
                                                           $_POST['cantidad'],

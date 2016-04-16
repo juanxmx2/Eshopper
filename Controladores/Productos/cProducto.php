@@ -7,7 +7,7 @@ $producto = new Producto();
 	
 	$id_categoria = $producto->cargar_id($_POST['categoria']);
 
-    $producto->Crear_Producto(    $_POST['nombre'],
+    $producto->Crear_Producto(    strtoupper($_POST['nombre']),
                                	$_POST['referencia'], 
                                	$_POST['precio'],
                                	$_POST['cantidad'],
