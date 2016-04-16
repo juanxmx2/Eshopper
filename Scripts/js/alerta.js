@@ -1,13 +1,15 @@
-var ALERT_TITLE = "Oops!";
+var ALERT_TITLE = "";
 var ALERT_BUTTON_TEXT = "Ok";
 
 if(document.getElementById) {
-	window.alerts = function(txt) {
-		createCustomAlert(txt);
+	window.alerts = function(txt, mensaje) {
+		createCustomAlert(txt, mensaje);
 	}
 }
 
-function createCustomAlert(txt) {
+function createCustomAlert(txt, mensaje) {
+
+	ALERT_TITLE = mensaje;
 	d = document;
 
 	if(d.getElementById("modalContainer")) return;
