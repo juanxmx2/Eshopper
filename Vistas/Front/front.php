@@ -103,25 +103,27 @@
                                           ?>
 								</a></li>
                                     
-                                <?php 
-                                   if($_SESSION['usuario']){
-								echo '<li ><a href="../Principales/cuenta.php" target="principal"><i class="fa fa-user"></i> Cuenta</a></li>
-									  <li ><a href="#" onclick="Cerrar()"><i class="fa fa-lock"></i> Salir</a></li>';
-									}
-
-									 if($user->cargar_privilegio_Usuario($_SESSION['usuario'])){
-                                                  if($tupla = $user->datos()){
-                                                      if($tupla[0] == 1)
-                                                      {
-                                                      	echo '<li ><a href="../Principales/cargarImagenes.php" target="principal"><i class="fa fa-bookmark-o"></i> Administrar</a></li>';
-                                                      }
-                                                  }
-                                              }										
-								?>
-								
-								<li id="carrito"><a href="../Principales/cart.php" target="principal"><i class="fa fa-shopping-cart"></i> Carrito</a></li>
-								<li id="login"><a href="../Principales/login.php" target="principal"><i class="fa fa-unlock"></i> Login</a></li>
-								
+			                               <?php 
+			                                   if($_SESSION['usuario']){
+								echo '<li ><a href="../Principales/cuenta.php" target="principal"><i class="fa fa-user"></i> Cuenta</a></li>';
+								if($user->cargar_privilegio_Usuario($_SESSION['usuario'])){
+			                                                  if($tupla = $user->datos()){
+			                                                      if($tupla[0] == 1)
+			                                                      {
+			                                                      	echo '<li ><a href="../Principales/cargarImagenes.php" target="principal"><i class="fa fa-bookmark-o"></i> Administrar</a></li>';
+			                                                      }
+			                                                  }
+			                                        }			
+			
+			                                    	echo '<li ><a href="#" onclick="Cerrar()"><i class="fa fa-lock"></i> Salir</a></li>';	
+							   }
+							    else{
+								echo '<li id="login"><a href="../Principales/login.php" target="principal"><i class="fa fa-unlock"></i> Login</a></li>';
+							    }						
+							?>
+											
+							<li id="carrito"><a href="../Principales/cart.php" target="principal"><i class="fa fa-shopping-cart"></i> Carrito</a></li>
+											
 							</ul>
 						</div>
 					</div>
