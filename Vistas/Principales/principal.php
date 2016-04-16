@@ -282,8 +282,7 @@
 										</div>
 										<div class='product-overlay'>
 											<div class='overlay-content'>
-												<h2>".$tupla[2]."</h2>
-												<p>".$tupla[0]."</p>
+												
 												<a href='#' class='btn btn-default add-to-cart'><i class='fa fa-shopping-cart'></i>Añadir al Carrito</a>
 											</div>
 											";if($tupla[6] == 0)
