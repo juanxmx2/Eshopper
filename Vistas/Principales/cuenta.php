@@ -36,9 +36,9 @@
 					<div class="login-form"><!--login form-->
 						<h2>Datos Personales</h2>
 						<form id="vinculacion" method="POST" action="/Eshopper/Controladores/Usuarios/cVinculacionDatos.php">
-							<input name="identificacion" id = "identificacion" type="number" placeholder="Numero de identificacion" />
-							<input name="telefono"  id = "telefono" type="tel" placeholder="Telefono" />
-							<input name="direccion" id = "direccion" type="email" placeholder="Dirección" />
+							<input name="identificacion" id = "identificacion" placeholder="Numero de identificacion"/>
+							<input name="telefono"  id = "telefono" type="tel" placeholder="Telefono"/>
+							<input name="direccion" id = "direccion" type="email" placeholder="Dirección"/>
 							<input name="ciudad"  id = "ciudad" type="text" placeholder="Ciudad" />
 							<button type="button" class="btn btn-default" onclick="vincular()">Vincular Datos</button>
 						</form>

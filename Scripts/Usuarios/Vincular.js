@@ -1,19 +1,47 @@
 document.write("<"+"script type='text/javascript' src='../../Scripts/js/alerta.js'><"+"/script>")
+
+ var cent=0;
 function vincular(){
     
-    if($("#nombres").val() === ""){
+    if($('#identificacion').val() === ""){
         $("#identificacion").focus();
-        alerts("El nombre es obligatorio para el Registro");
-    }else if($("#telefono").val() === ""){
-        $("#email").focus();
-        alerts("El E-mail es obligatorio para el registro");
-    }else if($("#ciudad").val() === ""){
-        $("#contrasena").focus();
-        alerts("La contraseña es obligatoria para el registro");
-    }else if($("#direccion").val() === ""){
-        $("#contrasena").focus();
-        alerts("La contraseña es obligatoria para el registro");
-    }else{
-        document.getElementById("vinculacion").submit();
+        alerts("La identificacion es obligatorio para la vinculacion");
     }
+    else{
+        validarSiNumero($("#identificacion").val());
+        if(cent==0){
+            if($('#telefono').val() === ""){
+                $("#telefono").focus();
+                alerts("El telefono es obligatorio para la vinculacion");
+            }
+            else{
+                validarSiNumero($("#telefono").val());
+                if(cent==0){
+                    if($("#direccion").val() === ""){
+                        $("#direccion").focus();
+                        alerts("La direccion es obligatoria para el registro");
+                                
+                    }
+                    else{
+                        if($("#ciudad").val() === ""){
+                            $("#ciudad").focus();
+                            alerts("La ciudad es obligatoria para el registro");
+                        }
+                        else{
+                                document.getElementById("vinculacion").submit();
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+function validarSiNumero(numero){
+    cent=0;
+    if (!/^([0-9])*$/.test(numero)){
+        alerts("El valor " + numero + " no es un número");
+        cent=1;
+    } 
 }
