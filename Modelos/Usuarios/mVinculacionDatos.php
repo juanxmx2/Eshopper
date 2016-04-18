@@ -26,7 +26,8 @@ private $bd;
                                         WHERE email = '".$email."'");
             $this->bd->desconectar();
             echo'  <script>
-                alert("Datos Actualizados");
+               <script type="text/javascript" src="../../Scripts/js/alerta.js"></script>"
+                alerts("¡Actualizacion de Datos Exitosa!", "Vinculacion Exitosa");
                 top.location.href="/Eshopper/Vistas/Front/front.php";
         </script>';
         }else{
@@ -40,7 +41,8 @@ private $bd;
                                                     '".$email."');");
             $this->bd->desconectar();
              echo'  <script>
-                alert("Registro Satisfactorio");
+                 <script type="text/javascript" src="../../Scripts/js/alerta.js"></script>"
+                alerts("¡Datos Vinculados Exitosamente!", "Vinculacion Exitosa");
                 top.location.href="/Eshopper/Vistas/Front/front.php";
         </script>';
         }

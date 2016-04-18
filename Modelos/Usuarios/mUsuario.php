@@ -20,9 +20,9 @@ private $bd;
      
 
         if($this->existe_Usuario($email)){
-            //echo '<script language="javascript">alert("El correo ya Existe");</script>'; 
           echo'  <script>
-                alert("¡El Correo Ya existe!");
+          <script type="text/javascript" src="../../Scripts/js/alerta.js"></script>"
+                alerts("¡El Correo Ya existe!", "Datos Existentes");
                 document.location.href = "/Eshopper/Vistas/Principales/login.php","principal";
         </script>';
         }else{
@@ -35,7 +35,8 @@ private $bd;
                                                     '".$privilegio."');");
             $this->bd->desconectar();
              echo'  <script>
-                alert("¡Registro Satisfactorio!");
+             <script type="text/javascript" src="../../Scripts/js/alerta.js"></script>"
+                alerts("¡Registro Satisfactorio!", "Datos Correctos");
               document.location.href = "/Eshopper/Vistas/Principales/login.php","principal";
         </script>';
         }
