@@ -29,6 +29,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="../../images/ico/apple-touch-icon-57-precomposed.png">
 
+    <script src="../../Scripts/Carrito/Carrito.js"> </script>	
+
 <body>
 
 	<section id="cart_items">
@@ -80,16 +82,19 @@
 							</td>
 							<td class='cart_quantity'>
 								<div class='cart_quantity_button'>
-									<a class='cart_quantity_up' href='#'> + </a>
-									<input class='cart_quantity_input' type='text' name='quantity' value='1' autocomplete='off' size='2'>
-									<a class='cart_quantity_down' href='#'> - </a>
+									<a class='cart_quantity_up' href='#' id='".$tupla[0]."' onclick='aumentarCantidad(".$tupla[2].",this.id)'> + </a>
+									<input class='cart_quantity_input' type='text' name='cantidad' id='cantidad".$tupla[0]."' value='1' autocomplete='off' size='2' min='0' onBlur='perdidaFocus(".$tupla[0].")'>
+									<a class='cart_quantity_down' href='#' id='".$tupla[0]."' onclick='disminuirCantidad(".$tupla[2].", this.id)'> - </a>
 								</div>
 							</td>
 							<td class='cart_total'>
-								<p class='cart_total_price'>$".$tupla[2]."</p>
+								<input disabled class='cart_quantity_input' type='text' name='cantidadTotal' id='cantidadTotal".$tupla[0]."' value='".$tupla[2]."'>
 							</td>
 							<td class='cart_delete'>
-								<a class='cart_quantity_delete' href=''><i class='fa fa-times'></i></a>
+								<a class='cart_quantity_delete' id='".$tupla[7]."' onclick='borrarCarrito(this.id)'><i class='fa fa-times'></i></a>
+								<form name='borrar' id='borrar".$tupla[7]."' method='POST' action='../../Controladores/Carrito/cBorrarCarrito.php'>
+												<input name='id' id = 'id' type='hidden' value='".$tupla[7]."'/>
+								</form>
 							</td>
 						</tr>";
 					}
@@ -170,9 +175,11 @@
 		</div>
 	</section><!--/#do_action-->
 
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.scrollUp.min.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/main.js"></script>
+  <script src="../../js/jquery.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/jquery.scrollUp.min.js"></script>
+	<script src="../../js/price-range.js"></script>
+    <script src="../../js/jquery.prettyPhoto.js"></script>
+    <script src="../../js/main.js"></script>
 </body>
 </html>

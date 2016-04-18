@@ -32,8 +32,7 @@ private $bd;
                                                     '".$id."');");
             $this->bd->desconectar();
              echo'  <script>
-             <script type="text/javascript" src="../../Scripts/js/alerta.js"></script>"
-                alerts("Creacion de producto Satisfactorio", "Registro Satisfactorio");
+                alert("Creacion de producto Satisfactorio");
                top.location.href="/Eshopper/Vistas/Front/front.php";
         </script>';
         

@@ -47,9 +47,17 @@ private $bd;
 
   function cargar_carrito($email){
         $this->bd->conectar();
-        $consulta = $this->bd->set_Consulta("SELECT p.id, p.nombre, p.precio, p.cantidad, p.imagen,p.referencia,c.email
+        $consulta = $this->bd->set_Consulta("SELECT p.id, p.nombre, p.precio, p.cantidad, p.imagen,p.referencia,c.email, c.id_carrito
                                                 FROM carrito c INNER JOIN producto p on c.id_producto = p.id
                                                 WHERE c.email = '".$email."';");
+        $this->bd->desconectar();
+        return $consulta;
+    }
+
+    function Borrar_Carrito($id){
+        $this->bd->conectar();
+        $consulta = $this->bd->set_Consulta("DELETE  FROM carrito
+                                                WHERE id_carrito = '".$id."';");
         $this->bd->desconectar();
         return $consulta;
     }

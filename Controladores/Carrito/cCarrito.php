@@ -11,7 +11,10 @@ $carrito = new Carrito();
                             $usuario
                                 
            );
-
+ echo ' <script>
+                alert("Producto Cargado en Carrito");
+            
+            </script>';
  echo '<script type="text/javascript">'
     . 'top.location="../../Vistas/Front/front.php";'
     . '</script>';
