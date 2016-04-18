@@ -37,7 +37,7 @@
 		<div class="container">
 			<div class="breadcrumbs">
 				<ol class="breadcrumb">
-				   <li><a href="#">Inicio</a></li>
+				   <li><a href="../Front/front.php">Inicio</a></li>
 				  <li class="active">Carrito</li>
 				  
 				</ol>
@@ -163,9 +163,23 @@
 				<div class="col-sm-6">
 					<div class="total_area">
 						<ul>
-							<li>Subtotal Carrito <span>$59</span></li>
-							<li>Costo de Envio<span>Gratis</span></li>
-							<li>Total <span>$59</span></li>
+						<?php 
+							$usuario = $_SESSION['usuario'];
+							$valorTotal=0;
+							if($consulta = $carrito->cargar_carrito($usuario)){
+								$cantidad = pg_num_rows($consulta);
+								
+                                 for($i=0;$i< $cantidad; $i++){
+                                 	$tupla = $carrito->datos();
+                                 	$valorTotal+=$tupla[2];
+                                 }
+                             }
+
+                             echo " <li>Subtotal Carrito <span>".$valorTotal."</span></li>
+									<li>Costo de Envio<span>Gratis</span></li>
+									<li>Total <span>".$valorTotal."</span></li>";
+							
+							?>
 						</ul>
 							<a class="btn btn-default update" href="">Actualizar</a>
 							<a class="btn btn-default check_out" href="">Revisar</a>
