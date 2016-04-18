@@ -4,7 +4,6 @@
     $user = new Usuario();
     $_SESSION['usuario'];
 ?>
-
 <html lang="en">
 <head>
     <meta charset="utf-8">

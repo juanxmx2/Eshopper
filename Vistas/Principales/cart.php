@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php 
+	session_start();
+	require_once("../../Modelos/Carrito/mCarrito.php");
+	$carrito = new Carrito();
+	$_SESSION['usuario'];
+ ?>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -48,82 +53,50 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td class="cart_product">
-								<a href=""><img src="images/cart/one.png" alt=""></a>
-							</td>
-							<td class="cart_description">
-								<h4><a href="">Colorblock Scuba</a></h4>
-								<p>Web ID: 1089772</p>
-							</td>
-							<td class="cart_price">
-								<p>$59</p>
-							</td>
-							<td class="cart_quantity">
-								<div class="cart_quantity_button">
-									<a class="cart_quantity_up" href=""> + </a>
-									<input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
-									<a class="cart_quantity_down" href=""> - </a>
-								</div>
-							</td>
-							<td class="cart_total">
-								<p class="cart_total_price">$59</p>
-							</td>
-							<td class="cart_delete">
-								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
-							</td>
-						</tr>
 
+						<?php 
+						$usuario = $_SESSION['usuario'];
+					if($consulta = $carrito->cargar_carrito($usuario)){
+								
+                                 $cantidad = pg_num_rows($consulta);
+
+                                 for($i=0;$i< $cantidad; $i++){
+                                 	$tupla = $carrito->datos();
+                                    $imagen = pg_unescape_bytea($tupla[4]);
+
+                                    
+
+						echo "
 						<tr>
-							<td class="cart_product">
-								<a href=""><img src="images/cart/two.png" alt=""></a>
+							<td class='cart_product'>
+								<a href=''><img src='".$imagen."' alt='Smiley face' height='150' width='150'></a>
 							</td>
-							<td class="cart_description">
-								<h4><a href="">Colorblock Scuba</a></h4>
-								<p>Web ID: 1089772</p>
+							<td class='cart_description'>
+								<h4><a href=''>".$tupla[1]."</a></h4>
+								<p>Referencia: ".$tupla[5]."</p>
 							</td>
-							<td class="cart_price">
-								<p>$59</p>
+							<td class='cart_price'>
+								<p>$".$tupla[2]."</p>
 							</td>
-							<td class="cart_quantity">
-								<div class="cart_quantity_button">
-									<a class="cart_quantity_up" href=""> + </a>
-									<input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
-									<a class="cart_quantity_down" href=""> - </a>
+							<td class='cart_quantity'>
+								<div class='cart_quantity_button'>
+									<a class='cart_quantity_up' href='#'> + </a>
+									<input class='cart_quantity_input' type='text' name='quantity' value='1' autocomplete='off' size='2'>
+									<a class='cart_quantity_down' href='#'> - </a>
 								</div>
 							</td>
-							<td class="cart_total">
-								<p class="cart_total_price">$59</p>
+							<td class='cart_total'>
+								<p class='cart_total_price'>$".$tupla[2]."</p>
 							</td>
-							<td class="cart_delete">
-								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
+							<td class='cart_delete'>
+								<a class='cart_quantity_delete' href=''><i class='fa fa-times'></i></a>
 							</td>
-						</tr>
-						<tr>
-							<td class="cart_product">
-								<a href=""><img src="images/cart/three.png" alt=""></a>
-							</td>
-							<td class="cart_description">
-								<h4><a href="">Colorblock Scuba</a></h4>
-								<p>Web ID: 1089772</p>
-							</td>
-							<td class="cart_price">
-								<p>$59</p>
-							</td>
-							<td class="cart_quantity">
-								<div class="cart_quantity_button">
-									<a class="cart_quantity_up" href=""> + </a>
-									<input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
-									<a class="cart_quantity_down" href=""> - </a>
-								</div>
-							</td>
-							<td class="cart_total">
-								<p class="cart_total_price">$59</p>
-							</td>
-							<td class="cart_delete">
-								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
-							</td>
-						</tr>
+						</tr>";
+					}
+
+					}
+ 					?>
+						
 					</tbody>
 				</table>
 			</div>
