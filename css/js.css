@@ -38,10 +38,10 @@
 }
 
 #alertBox p {
-	font:0.7em verdana,arial;
+	font:1em verdana,arial;
 	height:50px;
 	padding-left:5px;
-	margin-left:55px;
+	margin-left:35px;
 }
 
 #alertBox #closeBtn {

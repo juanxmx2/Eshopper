@@ -33,7 +33,8 @@
     <link rel="apple-touch-icon-precomposed" href="../../images/ico/apple-touch-icon-57-precomposed.png">
 
 
-    <script src="../../js/jquery-2.1.0.min.js" type="text/javascript"> </script>					
+    <script src="../../js/jquery-2.1.0.min.js" type="text/javascript"> </script>	
+    <script src="../../Scripts/Carrito/Carrito.js"> </script>						
 
 
   <!--  <script type="text/javascript">
@@ -279,12 +280,19 @@
 											<p><b>".$tupla[0]."</b></p>
 											<p><b>Ref. </b>".$tupla[1]."</p>
 											<p><b>Stock</b> ".$tupla[3]."</p>
-											<a href='#' class='btn btn-default add-to-cart'><i class='fa fa-shopping-cart'></i>Añadir al Carrito</a>
+											<form name='formulario' id='".$tupla[7]."' method='POST' action='../../Controladores/Carrito/cCarrito.php'>
+											<input name='carrito' id = 'carrito' type='hidden' value='".$tupla[7]."'/>
+											</form>
+											<a href='' class='btn btn-default add-to-cart' onclick='cargar_carrito(".$tupla[7].")'><i class='fa fa-shopping-cart'></i>Añadir al Carrito</a>
+
 										</div>
 										<div class='product-overlay'>
 											<div class='overlay-content'>
-												
-												<a href='#' class='btn btn-default add-to-cart'><i class='fa fa-shopping-cart'></i>Añadir al Carrito</a>
+												<form name='formulario' id='".$tupla[7]."' method='POST' action='../../Controladores/Carrito/cCarrito.php'>
+												<input name='carrito' id = 'carrito' type='hidden' value='".$tupla[7]."'/>
+												</form>
+												<a href='#' class='btn btn-default add-to-cart' onclick='cargar_carrito(".$tupla[7].")'><i class='fa fa-shopping-cart'></i>Añadir al Carrito</a>
+
 											</div>
 											";if($tupla[6] == 0)
 											{

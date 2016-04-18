@@ -21,10 +21,9 @@ private $bd;
 
         if($this->existe_Usuario($email)){
           echo'  <script>
-          <script type="text/javascript" src="../../Scripts/js/alerta.js"></script>"
-                alerts("¡El Correo Ya existe!", "Datos Existentes");
+                alert("El Correo ya existe");
                 document.location.href = "/Eshopper/Vistas/Principales/login.php","principal";
-        </script>';
+                </script>';
         }else{
             $this->bd->conectar();
             $this->bd->set_Consulta("INSERT INTO usuarios(email,nombres,contrasena, privilegio)
@@ -35,8 +34,7 @@ private $bd;
                                                     '".$privilegio."');");
             $this->bd->desconectar();
              echo'  <script>
-             <script type="text/javascript" src="../../Scripts/js/alerta.js"></script>"
-                alerts("¡Registro Satisfactorio!", "Datos Correctos");
+                alert("¡Registro Satisfactorio!");
               document.location.href = "/Eshopper/Vistas/Principales/login.php","principal";
         </script>';
         }

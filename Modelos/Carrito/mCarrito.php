@@ -1,12 +1,12 @@
 <?php 
 require_once("../../Controladores/baseDatos/cConexionBD.php");
 
-class Producto
+class Carrito
 {
 
 private $bd;
 
- function Producto(){
+ function Carrito(){
         $this->bd = new ConexionPostgres();
     }
     
@@ -15,27 +15,18 @@ private $bd;
         return $datos;
     }
 
-     function Crear_Producto($nombres, $referencia, $precio, $cantidad, $disponible, $imagen, $id){
+     function Crear_Carrito($id_producto,$email){
 
      
 
       
             $this->bd->conectar();
-            $this->bd->set_Consulta("INSERT INTO producto(nombre,referencia,precio, cantidad, disponible, imagen, id_categoria)
+            $this->bd->set_Consulta("INSERT INTO carrito(id_producto,email)
                                             VALUES( 
-                                                    '".$nombres."',
-                                                    '".$referencia."',
-                                                    '".$precio."',
-                                                    '".$cantidad."',
-                                                    '".$disponible."',
-                                                    '".$imagen."',
-                                                    '".$id."');");
+                                                    '".$id_producto."',
+                                                    '".$email."');");
             $this->bd->desconectar();
-             echo'  <script>
-             <script type="text/javascript" src="../../Scripts/js/alerta.js"></script>"
-                alerts("Creacion de producto Satisfactorio", "Registro Satisfactorio");
-               top.location.href="/Eshopper/Vistas/Front/front.php";
-        </script>';
+            
         
         }
 
@@ -70,7 +61,7 @@ private $bd;
 
   function cargar_productos(){
         $this->bd->conectar();
-        $consulta = $this->bd->set_Consulta("SELECT nombre, referencia, precio, cantidad, imagen, id_categoria,cantidad, id
+        $consulta = $this->bd->set_Consulta("SELECT nombre, referencia, precio, cantidad, imagen, id_categoria,cantidad
                                             FROM producto
                                             WHERE disponible = 1
                                             ORDER BY id_categoria ASC;");
