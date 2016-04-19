@@ -908,6 +908,10 @@ h2.title {
   width: 100%;
 }
 
+.features_items img{
+  width: 100%;
+}
+
 .productinfo{
  position:relative;
 }
