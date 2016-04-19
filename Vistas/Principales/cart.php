@@ -33,7 +33,7 @@
 
 <body>
 
-	<section id="cart_items">
+	
 		<div class="container">
 			<div class="breadcrumbs">
 				<ol class="breadcrumb">
@@ -106,7 +106,6 @@
 				</table>
 			</div>
 		</div>
-	</section> <!--/#cart_items-->
 
 	<section id="do_action">
 		<div class="container">
