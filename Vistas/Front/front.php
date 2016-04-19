@@ -171,8 +171,9 @@
 					</div>
 				</div>
 			</div>
+			<div class="row2"></div><!--/header-bottom-->
 		</div>
-		<div class="row2"></div><!--/header-bottom-->
+		
 	</header><!--/header-->
 
 	
