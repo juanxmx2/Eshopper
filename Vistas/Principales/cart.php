@@ -35,13 +35,6 @@
 
 	<section id="cart_items">
 		<div class="container">
-			<div class="breadcrumbs">
-				<ol class="breadcrumb">
-				   <li><a href="../Principales/principal.php">Inicio</a></li>
-				  <li class="active">Carrito</li>
-				  
-				</ol>
-			</div>
 			<div class="table-responsive cart_info">
 				<table class="table table-condensed">
 					<thead>

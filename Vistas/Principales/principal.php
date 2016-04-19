@@ -35,33 +35,6 @@
 
     <script src="../../js/jquery-2.1.0.min.js" type="text/javascript"> </script>	
     <script src="../../Scripts/Carrito/Carrito.js"> </script>						
-
-
-  <!--  <script type="text/javascript">
-			$(document).ready(function() {
-				$("#login").click(function(event) {
-					$("#cuerpo").load('login.html');
-				});
-			});
-
-			$(document).ready(function() {
-				$("#carrito").click(function(event) {
-					$("#cuerpo").load('cart.html');
-				});
-			});
-
-			$(document).ready(function() {
-				$("#rev").click(function(event) {
-					$("#cuerpo").load('checkout.html');
-				});
-			});
-
-			$(document).ready(function() {
-				$("#productos").click(function(event) {
-					$("#cuerpo").load('Shop.html');
-				});
-			});
-		</script>-->
 </head><!--/head-->
 
 	<section id="slider"><!--slider-->
@@ -133,74 +106,10 @@
 	<section>
 		<div class="container">
 			<div class="row">				
-				<div >
-					<div class="features_items"><!--features_items-->
+				<div class="features_items">
 						<h2 class="title text-center">Articulos</h2>
-
-						<?php 
-
-							if($consulta = $producto->cargar_productos()){
-                                 $cantidad = pg_num_rows($consulta);
-                                		
-
-
-                                    for($i=0;$i<$cantidad;$i++){
-                                    	$tupla = $producto->datos();
-                                    	$imagen = pg_unescape_bytea($tupla[4]);
-                                    	
-                                        echo "<div class='col-sm-4'>
-										<div class='product-image-wrapper'>
-										<div class='single-products'>
-										<div class='productinfo text-center'>
-											<img src='".$imagen."' alt='' />
-											<h2>$".number_format($tupla[2], 2, ",", ".")."</h2>
-											<p><b>".$tupla[0]."</b></p>
-											<p><b>Ref. </b>".$tupla[1]."</p>
-											<p><b>Stock</b> ".$tupla[3]."</p>
-											<form name='formulario' id='".$tupla[7]."' method='POST' action='../../Controladores/Carrito/cCarrito.php'>
-											<input name='carrito' id = 'carrito' type='hidden' value='".$tupla[7]."'/>
-											</form>
-											<a href='' class='btn btn-default add-to-cart' onclick='cargar_carrito(".$tupla[7].")'><i class='fa fa-shopping-cart'></i>Añadir al Carrito</a>
-
-										</div>
-										<div class='product-overlay'>
-											<div class='overlay-content'>
-												<form name='formulario' id='".$tupla[7]."' method='POST' action='../../Controladores/Carrito/cCarrito.php'>
-												<input name='carrito' id = 'carrito' type='hidden' value='".$tupla[7]."'/>
-												</form>
-												<a href='#' class='btn btn-default add-to-cart' onclick='cargar_carrito(".$tupla[7].")'><i class='fa fa-shopping-cart'></i>Añadir al Carrito</a>
-
-											</div>
-											";if($tupla[6] == 0)
-											{
-												echo "<img src='../../images/shop/agotado.png' class='new' alt='' />";
-											}
-											echo "
-										</div>
-								</div>
-								<div class='choose'>
-									<ul class='nav nav-pills nav-justified'>
-										<li><a href='#'><i class='fa fa-plus-square'></i>Añadir a Favoritos</a></li>
-										<li><a href='#'><i class='fa fa-plus-square'></i>Add to compare</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>";
-
-               
-                                }
-
-                                }else{
-
-                                	echo "Error";
-                                }
-						 ?>
-					
-					</div>
-
-
 							<div class='category-tab'>
-								<div class='col-sm-12'>
+								
 								<ul class='nav nav-tabs'>
 							<?php  
 
@@ -218,7 +127,7 @@
 							}
 								?>
                                 </ul>
-								</div>
+								
 								<div class='tab-content'>
 								<?php
 
@@ -243,14 +152,21 @@
 									<div class='product-image-wrapper'>
 										<div class='single-products'>
 											<div class='productinfo text-center'>
-												<img src='".$imagen."' alt='' />
+												<img src='".$imagen."' width='350px' height='300px' />
 											<h2>$".number_format($tupla2[2], 2, ",", ".")."</h2>
 											<b>".$tupla2[0]."</b>
 											<p><b>Ref. </b> ".$tupla2[1]."</p>
 											<p><b>Stock </b>".$tupla2[3]."</p>
-												<a href='#' class='btn btn-default add-to-cart'><i class='fa fa-shopping-cart'></i>Añadir al Carrito</a>
-											</div>
-											
+												<form name='formulario' id='".$tupla2[7]."' method='POST' action='../../Controladores/Carrito/cCarrito.php'>
+												<input name='carrito' id = 'carrito' type='hidden' value='".$tupla2[7]."'/>
+												</form>
+											<a href='#' class='btn btn-default add-to-cart' onclick='cargar_carrito(".$tupla2[7].")'><i class='fa fa-shopping-cart'></i>Añadir al Carrito</a>
+											</div>";
+											if($tupla2[3] == 0)
+											{
+												echo "<img src='../../images/shop/agotado.png' class='new' alt='' />";
+											}
+											echo "
 										</div>
 									</div>
 								</div>";
@@ -271,33 +187,50 @@
 					
 				</div>
 					<div class="recommended_items"><!--recommended_items-->
-						<h2 class="title text-center">recommended items</h2>
+						<h2 class="title text-center">Articulos Recomendados</h2>
 						
 						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
 							<div class="carousel-inner">
 								<div class="item active">	
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													<img src="../../images/home/recommend1.jpg" alt="" />
-													<h2>$56</h2>
-													<p>Easy Polo Black Edition</p>
-													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Añadir al Carrito</a>
+									
+						<?php 
+
+							if($consulta = $producto->cargar_top_productos()){
+                                 $cantidad = pg_num_rows($consulta);
+                                		
+
+
+                                    for($i=0;$i<$cantidad;$i++){
+                                    	$tupla = $producto->datos();
+                                    	$imagen = pg_unescape_bytea($tupla[4]);
+                                    	
+										echo "<div class='col-sm-3'>
+											<div class='product-image-wrapper'>
+											<div class='single-products'>
+											<div class='productinfo text-center'>
+											<img src='".$imagen."' width='350px' height='300px' />
+											<h2>$".number_format($tupla[2], 2, ",", ".")."</h2>
+											<p><b>".$tupla[0]."</b></p>
+											
+											</div>
+											<img src='../../images/product-details/new.png' class='new' alt='' />;
 												</div>
-												
 											</div>
 										</div>
+										";
+									}
+								}
+					?>	
 									</div>
 									
 								</div>
-							</div>
-							 <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
-								<i class="fa fa-angle-left"></i>
+							
+						<!--	 <a class='left recommended-item-control' href='#recommended-item-carousel' data-slide='prev'>
+								<i class='fa fa-angle-left'></i>
 							  </a>
-							  <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
-								<i class="fa fa-angle-right"></i>
-							  </a>			
+							  <a class='right recommended-item-control' href='#recommended-item-carousel' data-slide='next'>
+								<i class='fa fa-angle-right'></i>
+							  </a>		-->	
 						</div>
 					</div><!--/recommended_items-->
 			</div>
