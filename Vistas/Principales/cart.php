@@ -37,7 +37,7 @@
 		<div class="container">
 			<div class="breadcrumbs">
 				<ol class="breadcrumb">
-				   <li><a href="../Front/front.php">Inicio</a></li>
+				   <li><a href="../Principales/principal.php">Inicio</a></li>
 				  <li class="active">Carrito</li>
 				  
 				</ol>
@@ -175,9 +175,9 @@
                                  }
                              }
 
-                             echo " <li>Subtotal Carrito <span>".$valorTotal."</span></li>
+                             echo " <li>Subtotal Carrito <span>$".number_format($valorTotal, 2, ",", ".")."</span></li>
 									<li>Costo de Envio<span>Gratis</span></li>
-									<li>Total <span>".$valorTotal."</span></li>";
+									<li>Total <span>$".number_format($valorTotal, 2, ",", ".")."</span></li>";
 							
 							?>
 						</ul>
