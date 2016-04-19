@@ -133,7 +133,7 @@
 	<section>
 		<div class="container">
 			<div class="row">				
-				<div class="col-sm-9 padding-right">
+				<div >
 					<div class="features_items"><!--features_items-->
 						<h2 class="title text-center">Articulos</h2>
 
@@ -197,6 +197,7 @@
 						 ?>
 					
 					</div>
+
 
 							<div class='category-tab'>
 								<div class='col-sm-12'>
@@ -263,7 +264,8 @@
 						?>
 							</div>
 						</div>
-					</div><!--/category-tab-->
+
+					
 					
 				
 					

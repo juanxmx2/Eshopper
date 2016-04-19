@@ -35,35 +35,8 @@
 
     <script src="../../js/jquery-2.1.0.min.js" type="text/javascript"> </script>	
     <script src="../../Scripts/Carrito/Carrito.js"> </script>						
-
-
-  <!--  <script type="text/javascript">
-			$(document).ready(function() {
-				$("#login").click(function(event) {
-					$("#cuerpo").load('login.html');
-				});
-			});
-
-			$(document).ready(function() {
-				$("#carrito").click(function(event) {
-					$("#cuerpo").load('cart.html');
-				});
-			});
-
-			$(document).ready(function() {
-				$("#rev").click(function(event) {
-					$("#cuerpo").load('checkout.html');
-				});
-			});
-
-			$(document).ready(function() {
-				$("#productos").click(function(event) {
-					$("#cuerpo").load('Shop.html');
-				});
-			});
-		</script>-->
 </head><!--/head-->
-
+<body class="row3" >
 	<section>
 		<div class="container">
 			<div class="row">
