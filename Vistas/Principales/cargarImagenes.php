@@ -62,7 +62,6 @@
                               $directorio = '../../images/product-details/';
                               $archivo = $directorio . basename($_FILES['fichero']['name']);  // se coloca en su lugar final
                               move_uploaded_file($_FILES['fichero']['tmp_name'], $archivo); 
-                              
                               $image = pg_escape_bytea($archivo);
                               
                               $categoria->cargar_id($_POST['categoria']);

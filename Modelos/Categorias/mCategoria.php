@@ -36,7 +36,7 @@ private $bd;
 
      function cargar_categoria_con_id($id){
         $this->bd->conectar();
-        $consulta = $this->bd->set_Consulta("SELECT p.nombre, p.referencia, p.precio, p.cantidad, p.imagen,c.nombre_categoria,c.id_categoria
+        $consulta = $this->bd->set_Consulta("SELECT p.nombre, p.referencia, p.precio, p.cantidad, p.imagen,c.nombre_categoria,c.id_categoria, p.id
                                             FROM categorias c
                                             INNER JOIN producto p on p.id_categoria = c.id_categoria
                                             WHERE c.id_categoria = '".$id."'");

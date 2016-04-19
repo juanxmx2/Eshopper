@@ -77,6 +77,17 @@ private $bd;
         return $consulta;
     }
 
+      function cargar_top_productos(){
+        $this->bd->conectar();
+        $consulta = $this->bd->set_Consulta("SELECT nombre, referencia, precio, cantidad, imagen, id_categoria,cantidad, id
+                                            FROM producto
+                                            WHERE disponible = 1
+                                            ORDER BY id_categoria ASC
+                                            LIMIT 3;");
+        $this->bd->desconectar();
+        return $consulta;
+    }
+
       function cargar_categoria(){
         $this->bd->conectar();
         $consulta = $this->bd->set_Consulta("SELECT nombre_categoria
