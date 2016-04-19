@@ -905,10 +905,12 @@ h2.title {
 }
 
 .productinfo img{
+  height: auto;
   width: 100%;
 }
 
 .features_items img{
+  height: auto;
   width: 100%;
 }
 
@@ -1118,6 +1120,7 @@ h2.title {
 
 #advertisement img {
   width: 100%;
+  height: auto;
 }
 
 .pagination {
@@ -1199,7 +1202,7 @@ h2.title {
 
 .view-product img {
   border: 1px solid #F7F7F0;
-  height: 380px;
+  height: auto;
   width: 100%;
 }
 
@@ -1657,9 +1660,16 @@ h2.title {
   font-size: 24px;
 }
 
+.cart_product img{
+  max-width: 100%;
+  height: auto;  
+}
+
 .cart_product {
   display: block;
   margin: 15px -70px 10px 25px;
+
+  
 }
 
 .cart_quantity_button a {
@@ -2323,7 +2333,7 @@ h2.title {
 }
 
 .response-area .media img{
-  height: 102px;
+ height: auto;
   width: 100%;
 }
 
