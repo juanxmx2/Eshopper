@@ -88,7 +88,7 @@
 								</div>
 							</td>
 							<td class='cart_total'>
-								<input disabled class='cart_quantity_input' type='text' name='cantidadTotal' id='cantidadTotal".$tupla[0]."' value='".$tupla[2]."'>
+								<input disabled class='cart_quantity_input' type='text' name='cantidadTotal' id='cantidadTotal".$tupla[0]."' value='".number_format($tupla[2], 2, ",", ".")." $'>
 							</td>
 							<td class='cart_delete'>
 								<a class='cart_quantity_delete' id='".$tupla[7]."' onclick='borrarCarrito(this.id)'><i class='fa fa-times'></i></a>

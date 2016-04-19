@@ -14,7 +14,11 @@ function aumentarCantidad(valor,id)
      var valor2 = eval(document.getElementById("cantidad"+id).value);
 	 document.getElementById("cantidad"+id).value = eval(valor2 + 1)
 
-	 document.getElementById("cantidadTotal"+id).value = valor *  document.getElementById("cantidad"+id).value;
+	 var valores = valor *  document.getElementById("cantidad"+id).value;
+	 var locale = 'de';
+	var options = {style: 'currency', currency: 'usd', minimumFractionDigits: 2, maximumFractionDigits: 2};
+	var formatter = new Intl.NumberFormat(locale, options);
+	document.getElementById("cantidadTotal"+id).value = formatter.format(valores);
 
 }
 
@@ -23,13 +27,22 @@ function disminuirCantidad(valor,id)
 	if( document.getElementById("cantidad"+id).value > 0){
 	 document.getElementById("cantidad"+id).value -=1;
 
-	 document.getElementById("cantidadTotal"+id).value = valor *  document.getElementById("cantidad"+id).value;
-	}
+	 var valores = valor *  document.getElementById("cantidad"+id).value;
+	 var locale = 'de';
+	var options = {style: 'currency', currency: 'usd', minimumFractionDigits: 2, maximumFractionDigits: 2};
+	var formatter = new Intl.NumberFormat(locale, options);
+	document.getElementById("cantidadTotal"+id).value = formatter.format(valores);
+}
+	
 }
 
 function perdidaFocus(id)
 {
-	document.getElementById("cantidadTotal"+id).value *=  document.getElementById("cantidad"+id).value;
+	var valor = document.getElementById("cantidadTotal"+id).value *  document.getElementById("cantidad"+id).value;
+	var locale = 'de';
+	var options = {style: 'currency', currency: 'usd', minimumFractionDigits: 2, maximumFractionDigits: 2};
+	var formatter = new Intl.NumberFormat(locale, options);
+	document.getElementById("cantidadTotal"+id).value = formatter.format(valor);
 }
 
 function borrarCarrito(id)
