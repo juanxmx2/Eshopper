@@ -178,8 +178,10 @@
 
 	
 	<div class="col-xs-12">
-                <div class="row">
-                    <iframe width="100%" height="100%" frameborder="0" align="top" id="principal" name="principal" src="../Principales/principal.php"></iframe>
+                <div class="col-x-2">
+                      	
+                    <iframe width="80%" height="100%" frameborder="0" align="top" id="principal" name="principal" src="../Principales/principal.php"></iframe>
+                     <iframe width="20%" height="100%" frameborder="0" align="left" id="derecho" name="derecho" src="../Principales/frame_derecho.php"></iframe>
                 </div>
     </div>
    
