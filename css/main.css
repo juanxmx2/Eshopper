@@ -702,8 +702,8 @@ ul.sub-menu {
 
 .left-sidebar h2:after, h2.title:after{
 	content: " ";
-	position: absolute;
-	border: 1px solid #f5f5f5;
+
+	
 	bottom:8px;
 	left: 0;
 	width: 100%;
@@ -713,7 +713,7 @@ ul.sub-menu {
 
 .left-sidebar h2:before{
 	content: " ";
-	position: absolute;
+	
 	background: #fff;
 	bottom: -6px;
 	width: 130px;
@@ -725,7 +725,7 @@ ul.sub-menu {
 
 h2.title:before{
 	content: " ";
-	position: absolute;
+
 	background: #fff;
 	bottom: -6px;
 	width: 220px;

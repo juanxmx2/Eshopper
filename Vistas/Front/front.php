@@ -66,7 +66,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="front.php"><img src="../../images/home/logoD.png" /></a>
+							<a href="front.php"><img src="../../images/home/logoD.png" alt ="Error 404" /></a>
 						</div>
 						<div class="btn-group pull-right">
 							
@@ -270,7 +270,6 @@
     <script src="../../js/jquery.js"></script>
 	<script src="../../js/bootstrap.min.js"></script>
 	<script src="../../js/jquery.scrollUp.min.js"></script>
-	<script src="../../js/price-range.js"></script>
     <script src="../../js/jquery.prettyPhoto.js"></script>
     <script src="../../js/main.js"></script>
 </body>
