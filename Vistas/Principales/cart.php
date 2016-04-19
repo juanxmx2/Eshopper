@@ -78,7 +78,7 @@
 								<p>Referencia: ".$tupla[5]."</p>
 							</td>
 							<td class='cart_price'>
-								<p>$".$tupla[2]."</p>
+								<p>$".number_format($tupla[2], 2, ",", ".")."</p>
 							</td>
 							<td class='cart_quantity'>
 								<div class='cart_quantity_button'>

@@ -276,7 +276,7 @@
 										<div class='single-products'>
 										<div class='productinfo text-center'>
 											<img src='".$imagen."' alt='' />
-											<h2>$".$tupla[2]."</h2>
+											<h2>$".number_format($tupla[2], 2, ",", ".")."</h2>
 											<p><b>".$tupla[0]."</b></p>
 											<p><b>Ref. </b>".$tupla[1]."</p>
 											<p><b>Stock</b> ".$tupla[3]."</p>
@@ -366,7 +366,7 @@
 										<div class='single-products'>
 											<div class='productinfo text-center'>
 												<img src='".$imagen."' alt='' />
-											<h2>$".$tupla2[2]."</h2>
+											<h2>$".number_format($tupla2[2], 2, ",", ".")."</h2>
 											<b>".$tupla2[0]."</b>
 											<p><b>Ref. </b> ".$tupla2[1]."</p>
 											<p><b>Stock </b>".$tupla2[3]."</p>

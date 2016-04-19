@@ -1,7 +1,9 @@
 <?php
 	session_start();
     require_once("../../Modelos/Usuarios/mUsuario.php");
+    require_once("../../Modelos/Carrito/mCarrito.php");
     $user = new Usuario();
+    $carrito = new Carrito();
     $_SESSION['usuario'];
 ?>
 <html lang="en">
@@ -111,9 +113,15 @@
 								echo '<li id="login"><a href="../Principales/login.php" target="principal"><i class="fa fa-unlock"></i> Login</a></li>';
 							    }						
 							?>
-											
-							<li id="carrito"><a href="../Principales/cart.php" target="principal"><i class="fa fa-shopping-cart"></i> Carrito</a></li>
-											
+							<?php
+							   	$usuario = $_SESSION['usuario'];
+							   	$cantidad=0;
+							   	if($consulta = $carrito->cargar_carrito($usuario)){
+							   		$cantidad = pg_num_rows($consulta);
+							   	}
+								echo '<li id="carrito"><a href="../Principales/cart.php" target="principal"><i class="fa fa-shopping-cart"></i>Carrito('.$cantidad.')</a></li>';
+
+							?>		
 							</ul>
 						</div>
 					</div>
