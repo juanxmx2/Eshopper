@@ -37,35 +37,45 @@
 </head><!--/head-->
 <body>
 	<section id="form2"><!--form-->
-				<div class="col-sm-4 col-sm-offset-1">
-					
-
-						<?php
-							if($_SESSION['usuario']){
+				
+						<?php 
+			   if($_SESSION['usuario']){
 								if($dato->existe_Usuario($_SESSION['usuario'])){
 									if($user->cargar_nombre_Usuario($_SESSION['usuario'])){
 										if($tupla1 = $user->datos()){
-											echo '<div class="login-form2"><!--login form-->
-													<h2>Datos Personales</h2>
-													<form id="vinculacion" method="POST" action="/Eshopper/Controladores/Usuarios/	cVinculacionDatos.php">
-													<h2>Nombre:</h2><input type="text" id="Nombre" name="nombre" size="30" value="'.$tupla1[0].'"/>';
-										}
-									}
-									if($dato->cargar_datos_Usuario($_SESSION['usuario'])){
+											echo '
+					<div class="col-sm-4 col-sm-offset-1">
+					<div class="login-form"><!--login form-->
+						<h2>Datos Personales</h2>
+						<form id="vinculacion" method="POST" action="/Eshopper/Controladores/Usuarios/	cVinculacionDatos.php">
+							<p>Nombre:</p><input type="text" id="Nombre" name="nombre" size="30" value="'.$tupla1[0].'"/>';
+						}
+						
+					}
+						if($dato->cargar_datos_Usuario($_SESSION['usuario'])){
 										if($tupla2 = $dato->datos()){
-											echo '<h2>Identificacion:</h2><input type="text" id="identificacion" name="identificacion" value="'.$tupla2[0].'" size="30"/>
-												<h2>Telefono:</h2><input type="text" id="telefono" name="telefono" value="'.$tupla2[1].'"/>
-												<h2>Direccion:</h2><input type="text" id="direccion" name="direccion" value="'.$tupla2[2].'" size="30"/>
-												<h2>Ciudad:</h2><input type="text" id="ciudad" name="ciudad" value='.$tupla2[3].' size="30"/>
-												<h2>Datos de lacuenta</h2><h2>Email:<h2><input type="email" id="email" name="email" value="'.$tupla2[4].'" size="30"/>
-												<h2>Contraseña:</h2><input type="password" id="password" name="password" size="30"/>
-												<h2>Confirmar constraseña:</h2><input type="password" id="password2" name="password2"  size="30"/>
-												<button type="button" class="btn btn-default" onclick="vincular()">Vincular Datos</button>
-												</form>';
-										}
-									}
-				                }
-			                    else{
+										echo 	'<p>Identificacion:</p><input type="text" id="identificacion" name="identificacion" value="'.$tupla2[0].'" size="30"/>
+												<p>Telefono:</p><input type="text" id="telefono" name="telefono" value="'.$tupla2[1].'"/>
+												<p>Direccion:</p><input type="text" id="direccion" name="direccion" value="'.$tupla2[2].'" size="30"/>
+												<p>Ciudad:</p><input type="text" id="ciudad" name="ciudad" value='.$tupla2[3].' size="30"/>
+											</form>
+											</div><!--/login form-->
+											</div>
+					<div class="col-sm-4">
+					<div class="signup-form"><!--sign up form-->
+						<h2>Datos de la cuenta</h2>
+						<form >
+							<p>Email:<p><input disabled type="email" id="email" name="email" value="'.$tupla2[4].'" size="30"/>
+												<p>Contraseña:</p><input type="password" id="password" name="password" size="30"/>
+												<p>Confirmar constraseña:</p><input type="password" id="password2" name="password2"  size="30"/>
+												<button type="button" class="btn btn-default" onclick="vincular()">Actualizar Datos</button>
+												
+						</form>
+					</div><!--/sign up form-->
+				</div>';
+			}
+		}
+								} else{
 			                    	echo '<div class="login-form"><!--login form-->
 											<h2>Datos Personales</h2>
 			                    			<form id="vinculacion" method="POST" action="/Eshopper/Controladores/Usuarios/	cVinculacionDatos.php">
@@ -74,17 +84,19 @@
 											<input name="direccion" id = "direccion" type="email" placeholder="Dirección"/>
 											<input name="ciudad"  id = "ciudad" type="text" placeholder="Ciudad" />
 											<button type="button" class="btn btn-default" onclick="vincular()">Vincular Datos</button>
-											</form>';
+											</form>
+											</div>'
+											;
 			                    }
 			                    
 			                }
 
+
 						?>
-					</div><!--/cuenta form-->
-				</div>
-							
+
 		
-		</div>
+		
+					
 	</section><!--/form-->
 </body>
 </html>
