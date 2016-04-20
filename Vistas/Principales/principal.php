@@ -182,9 +182,6 @@
 						</div>
 
 					
-					
-				
-					
 				</div>
 					<div class="recommended_items"><!--recommended_items-->
 						<h2 class="title text-center">Articulos Recomendados</h2>

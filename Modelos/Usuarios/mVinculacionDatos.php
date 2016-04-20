@@ -47,6 +47,16 @@ private $bd;
 
 
     }
+    
+
+    function cargar_datos_Usuario($email){
+        $this->bd->conectar();
+        $consulta = $this->bd->set_Consulta("SELECT identificacion, telefono, direccion, ciudad, email
+                                            FROM datos_Usuarios
+                                            WHERE email = '".$email."';");
+        $this->bd->desconectar();
+        return $consulta;
+    }
 
      function existe_Usuario($email){
         $existe = false;

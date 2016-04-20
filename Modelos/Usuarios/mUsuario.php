@@ -78,6 +78,15 @@ private $bd;
         return $consulta;
     }
 
+    function cargar_contrasena_Usuario($email){
+        $this->bd->conectar();
+        $consulta = $this->bd->set_Consulta("SELECT contrasena
+                                            FROM usuarios
+                                            WHERE email = '".$email."';");
+        $this->bd->desconectar();
+        return $consulta;
+    }
+
       function cargar_privilegio_Usuario($email){
         $this->bd->conectar();
         $consulta = $this->bd->set_Consulta("SELECT privilegio
