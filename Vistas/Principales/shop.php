@@ -32,7 +32,7 @@
     <link rel="apple-touch-icon-precomposed" href="../../images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 
-<body>
+<body style="width: 100%; height: 100%; overflow: hide">
 	
 	<section id="advertisement">
 		<div class="container">
@@ -46,7 +46,7 @@
 		<div class="container">
 
 			<div class="col-x-2">
-			<iframe width="20%" height="100%" frameborder="0" align="left" id="derecho" name="derecho" src="../Principales/frame_derecho.php"></iframe>
+			<iframe width="23%" height="200%" frameborder="0" align="left" id="derecho" name="derecho" src="../Principales/frame_derecho.php"></iframe>
 	
 			<div class="row">				
 				<div class="col-sm-9 padding-right">
@@ -68,7 +68,7 @@
 							<div class='product-image-wrapper'>
 								<div class='single-products'>
 									<div class='productinfo text-center'>
-										<img src='".$imagen."' width='350' height='300' />
+										<img src='".$imagen."' width='250' height='200' />
 										<h2>$".number_format($tupla[2], 2, ",", ".")."</h2>
 										<p>".$tupla[0]."</p>
 										<form name='formulario' id='".$tupla[7]."' method='POST' action='../../Controladores/Carrito/cCarrito.php'>
