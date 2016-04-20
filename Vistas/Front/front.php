@@ -148,9 +148,7 @@
 								<li><a href="front.php" class="active">Inicio</a></li>
 								<li class="dropdown"><a href="#">Comprar<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li id="productos"><a href="../Principales/shop.php" target="principal">Productos</a></li>
-										<li><a href="product-details.html">Detalles de Productos</a></li> 
-										<li><a href="checkout.html">Revisar</a></li> 	
+                                        <li id="productos"><a href="../Principales/shop.php" target="principal">Productos</a></li>	
                                     </ul>
                                 </li> 
 							 <!-- <li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>

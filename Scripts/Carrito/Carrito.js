@@ -7,6 +7,12 @@ function cargar_carrito(id)
 
 }
 
+function cargar_detalle(id)
+{
+	document.getElementById("detalle"+id).submit();
+
+}
+
 function aumentarCantidad(valor,id)
 {
 	console.log(document.getElementById("cantidad"+id).value)

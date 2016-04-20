@@ -77,6 +77,16 @@ private $bd;
         return $consulta;
     }
 
+    function cargar_productos_detalle($id){
+        $this->bd->conectar();
+        $consulta = $this->bd->set_Consulta("SELECT nombre, referencia, precio, cantidad, imagen, id_categoria,cantidad, id
+                                            FROM producto
+                                            WHERE id = '".$id."'
+                                            ORDER BY id_categoria ASC;");
+        $this->bd->desconectar();
+        return $consulta;
+    }
+
       function cargar_top_productos(){
         $this->bd->conectar();
         $consulta = $this->bd->set_Consulta("SELECT nombre, referencia, precio, cantidad, imagen, id_categoria,cantidad, id
