@@ -37,8 +37,6 @@
 </head><!--/head-->
 <body>
 	<section id="form2"><!--form-->
-				
-						<?php 
 			   if($_SESSION['usuario']){
 								if($dato->existe_Usuario($_SESSION['usuario'])){
 									if($user->cargar_nombre_Usuario($_SESSION['usuario'])){
@@ -76,30 +74,27 @@
 			}
 		}
 								} else{
+							}
+						}
+					} 
+					else{
 			                    	echo '<div class="login-form"><!--login form-->
-			                    	<div class="col-sm-4">
 											<h2>Datos Personales</h2>
 			                    			<form id="vinculacion" method="POST" action="/Eshopper/Controladores/Usuarios/	cVinculacionDatos.php">
 											<input name="identificacion" id = "identificacion" placeholder="Numero de identificacion"/>
 											<input name="telefono"  id = "telefono" type="tel" placeholder="Telefono"/>
 											<input name="direccion" id = "direccion" type="email" placeholder="Dirección"/>
 											<input name="ciudad"  id = "ciudad" type="text" placeholder="Ciudad" />
-											<button type="button" class="btn btn-default" onclick="vincular()">Vincular Datos</button>
+											<button type="button" class="btn btn-default" onclick="vincular(0)">Vincular Datos</button>
 											</form>
-											</div>
-											</div>
-											'
+											</div>'
 											;
-			                    }
+			        }
 			                    
-			                }
+			    }
 
 
-						?>
-
-		
-		
-					
+		?>	
 	</section><!--/form-->
 </body>
 </html>

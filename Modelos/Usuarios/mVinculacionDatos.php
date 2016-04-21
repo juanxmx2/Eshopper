@@ -15,21 +15,7 @@ private $bd;
         return $datos;
     }
 
-     function vincular_datos($identificacion, $telefono, $direccion, $ciudad,$email){
-
-      if($this->existe_Usuario($email)){
-            $this->bd->conectar();
-            $this->bd->set_Consulta("UPDATE datos_usuarios SET  identificacion = '".$identificacion."',
-                                                                telefono = '".$telefono."',
-                                                                direccion = '".$direccion."',
-                                                                 ciudad = '".$ciudad."' 
-                                        WHERE email = '".$email."'");
-            $this->bd->desconectar();
-            echo'  <script>
-                alert("¡Actualizacion de Datos Exitosa!");
-                top.location.href="/Eshopper/Vistas/Front/front.php";
-        </script>';
-        }else{
+    function vincular_datos($identificacion, $telefono, $direccion, $ciudad,$email){
             $this->bd->conectar();
             $this->bd->set_Consulta("INSERT INTO datos_usuarios(identificacion,telefono, direccion, ciudad,email)
                                             VALUES( 
@@ -43,9 +29,29 @@ private $bd;
                 alert("¡Datos Vinculados Exitosamente!");
                 top.location.href="/Eshopper/Vistas/Front/front.php";
         </script>';
-        }
+        
 
 
+    }
+
+    function actualizar_datos($nombre, $identificacion, $telefono, $direccion, $ciudad,$password1, $email){
+        $this->bd->conectar();
+            $this->bd->set_Consulta("UPDATE datos_usuarios SET  identificacion = '".$identificacion."',
+                                                                telefono = '".$telefono."',
+                                                                direccion = '".$direccion."',
+                                                                ciudad = '".$ciudad."' 
+                                        WHERE email = '".$email."'");
+            $this->bd->desconectar();
+
+        $this->bd->conectar();
+            $this->bd->set_Consulta("UPDATE usuarios SET  nombres = '".$nombre."',
+                                                        contrasena = '".$password1."'
+                                        WHERE email = '".$email."'");
+        $this->bd->desconectar();
+        echo'  <script>
+                alert("¡Actualizacion de Usuario Exitosa!");
+                top.location.href="/Eshopper/Vistas/Front/front.php";
+                </script>';
     }
     
 
