@@ -62,3 +62,9 @@ function borrarCarrito(id)
 {
 	document.getElementById("borrar"+id).submit();
 }
+
+
+function comprar()
+{
+	document.location.href = "/Eshopper/Vistas/Principales/compra.php","principal";
+}

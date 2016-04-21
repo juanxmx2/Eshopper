@@ -174,8 +174,8 @@
 							
 							?>
 						</ul>
-							<a class="btn btn-default update" href="">Actualizar</a>
-							<a class="btn btn-default check_out" href="">Revisar</a>
+							<a class="btn btn-default update" href="javascript:void(0);">Actualizar</a>
+							<a class="btn btn-default check_out" onclick="comprar()" href="javascript:void(0);">Comprar</a>
 					</div>
 				</div>
 			</div>
