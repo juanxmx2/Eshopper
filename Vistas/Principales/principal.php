@@ -75,18 +75,6 @@
 								</div>
 							</div>
 							
-							<div class="item">
-								<div class="col-sm-6">
-									<h1><span>D</span>iseñarte</h1>
-									<h2>entrega gratis</h2>
-									<p>texto ejemplo</p>
-									<button type="button" class="btn btn-default get">¡Obtenlo Ahora!</button>
-								</div>
-								<div class="col-sm-6">
-									<img src="../../images/home/buso3.jpg" class="girl img-responsive" alt="" />
-									<img src="../../images/home/pricing.png" class="pricing" alt="" />
-								</div>
-							</div>
 							
 						</div>
 						

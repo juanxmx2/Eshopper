@@ -162,7 +162,7 @@
     <footer id="footer">
     <div class="header-top"><!--header_top-->
 			<div class="container">
-				<div class="row4">
+				<div class="row">
 					<div class="col-sm-6">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">

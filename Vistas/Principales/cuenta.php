@@ -46,7 +46,7 @@
 									<div class="col-sm-4 col-sm-offset-1">
 									<div class="login-form"><!--login form-->
 										<h2>Datos Personales</h2>
-										<form id="actualizacion" method="POST" action="../../Controladores/Usuarios/	cActualizacionDatos.php">
+										<form id="vinculacion" method="POST" action="../../Controladores/Usuarios/	cActualizacionDatos.php">
 											<p>Nombre:</p><input type="text" id="nombre" name="nombre" size="30" value="'.$tupla1[0].'"/>';
 							}
 						
@@ -60,13 +60,16 @@
 									</form>
 									</div><!--/login form-->
 									</div>
+									<div class="login-form">
 									<div class="col-sm-4">
+									<form>
 											<h2>Datos de la cuenta</h2>
 											<p>Email:<p><input disabled type="email" id="email" name="email" value="'.$tupla2[4].'" size="30"/>
 											<p>Contraseña:</p><input type="password" id="password1" name="password1" size="30"/>
 											<p>Confirmar constraseña:</p><input type="password" id="password2" name="password2"  size="30"/>
 											<button type="button" class="btn btn-default" onclick="vincular(1)">Actualizar Datos</button>
-												
+									<form>		
+									</div>		
 									</div>';
 							}
 						}
