@@ -78,10 +78,14 @@ a#scrollUp i{
 *******Header CSS******
 **************************/
 
-.header_top {
+.header_top li{
   background: none repeat scroll 0 0 #F0F0E9;
+  font-color: white;
 }
 
+.footer_bot {
+  background: none repeat scroll 0 0 #F0F0E9;
+}
 .contactinfo ul li:first-child{
     margin-left: -15px;
 }
@@ -169,6 +173,14 @@ a#scrollUp i{
   margin-right: 0;
   padding-bottom: 10px;
   padding-top: 10px;
+}
+
+.row4 {
+  border-top: 1px solid #007f76;
+  margin-left: 0;
+  margin-right: 0;
+  padding-bottom: 0px;
+  padding-top: 0px;
 }
 
 .header-middle .container .row .col-sm-4{
@@ -373,7 +385,7 @@ ul.sub-menu {
 **************************/
 
 #footer {
-  background: #F0F0E9;
+  background: white;
 }
 
 
