@@ -151,8 +151,8 @@
 												<form name='formulario' id='detalle".$tupla2[7]."' method='POST' action='../../Vistas/Principales/detalles_producto.php' target='principal'>
 												<input name='detalle' id = 'detalle' type='hidden' value='".$tupla2[7]."'/>
 												</form>
-											<a href='#' class='btn btn-default add-to-cart' onclick='cargar_carrito(".$tupla2[7].")'><i class='fa fa-shopping-cart'></i>Añadir al Carrito</a>
-											<a href='#' class='btn btn-default add-to-cart' onclick='cargar_detalle(".$tupla2[7].")'><i class='fa fa-info'></i>Ver Detalles</a>
+											<a href='javascript:void(0);' class='btn btn-default add-to-cart' onclick='cargar_carrito(".$tupla2[7].", ".$tupla2[3].")'><i class='fa fa-shopping-cart'></i>Añadir al Carrito</a>
+											<a href='javascript:void(0);' class='btn btn-default add-to-cart' onclick='cargar_detalle(".$tupla2[7].")'><i class='fa fa-info'></i>Ver Detalles</a>
 											</div>";
 											if($tupla2[3] == 0)
 											{

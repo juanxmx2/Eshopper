@@ -3,9 +3,14 @@ document.write("<"+"script type='text/javascript' src='../../Scripts/js/alerta.j
 
 
 
-function cargar_carrito(id)
+function cargar_carrito(id, cantidad)
 {
+	if(cantidad > 0){
 	document.getElementById(id).submit();
+	}else
+	{
+		  alerts("Lo sentimos en estos momentos no contamos con stock para este producto", "Producto Agotado");
+	}
 
 }
 

@@ -78,7 +78,7 @@
 									<form name="formulario" id="'.$_POST['detalle'].'" method="POST" action="../../Controladores/Carrito/cCarrito.php">
 												<input name="carrito" id = "carrito" type="hidden" value="'.$_POST['detalle'].'"/>
 												</form>
-									<button type="button" class="btn btn-fefault cart" onclick="cargar_carrito('.$_POST['detalle'].')">
+									<button type="button" class="btn btn-fefault cart" onclick="cargar_carrito('.$_POST['detalle'].', '.$tupla[3].')">
 										<i class="fa fa-shopping-cart"></i>
 										Añadir Al Carrito
 									</button>

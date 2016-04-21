@@ -3,6 +3,9 @@ session_start();
 $usuario = $_SESSION['usuario'];
 require_once("../../Modelos/Carrito/mCarrito.php");
 
+
+
+
 $carrito = new Carrito();
 
    
@@ -11,12 +14,23 @@ $carrito = new Carrito();
                             $usuario
                                 
            );
+
+
+ echo '<script type="text/javascript" src="../../Scripts/js/alerta.js"></script>'; 
+ echo '<head>
+ <link href="../../css/js.css" rel="stylesheet">
+ </head>';
+ echo '<body>';
  echo ' <script>
-                alert("Producto Cargado en Carrito");
+                alerts("Producto Cargado en Carrito", "Exito");
             
-            </script>';
+       
+       </script>';
+
+ echo '</body>' ;      
+         
  echo '<script type="text/javascript">'
-    . 'top.location="../../Vistas/Front/front.php";'
+    . 'setTimeout(function(){top.location="../../Vistas/Front/front.php"}, 1500);'
     . '</script>';
 
 ?>
