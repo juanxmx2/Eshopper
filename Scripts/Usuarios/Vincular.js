@@ -19,7 +19,8 @@ function vincular($indice){
                     if(cent==0){
                         if($("#direccion").val() === ""){
                             $("#direccion").focus();
-                            alerts("La direccion es obligatoria para el registro", "Formulario Incompleto");     
+                            alerts("La direccion es obligatoria para el registro", "Formulario Incompleto");
+                                    
                         }
                         else{
                             if($("#ciudad").val() === ""){
@@ -61,6 +62,7 @@ function vincular($indice){
                 }
             }
         }
+    
 }
 
 
