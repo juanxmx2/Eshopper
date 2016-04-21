@@ -31,7 +31,7 @@
 #alertBox h1 {
 	margin:0;
 	font:bold 0.9em verdana,arial;
-	background-color:#FE980F;
+	background-color:#007f76;
 	color:#FFF;
 	border-bottom:1px solid #000;
 	padding:2px 0 2px 5px;
@@ -55,7 +55,7 @@
 	text-transform:uppercase;
 	text-align:center;
 	color:#FFF;
-	background-color:#FE980F;
+	background-color:#007f76;
 	border-radius: 3px;
 	text-decoration:none;
 }
