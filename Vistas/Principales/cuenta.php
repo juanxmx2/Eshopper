@@ -77,6 +77,7 @@
 		}
 								} else{
 			                    	echo '<div class="login-form"><!--login form-->
+			                    	<div class="col-sm-4">
 											<h2>Datos Personales</h2>
 			                    			<form id="vinculacion" method="POST" action="/Eshopper/Controladores/Usuarios/	cVinculacionDatos.php">
 											<input name="identificacion" id = "identificacion" placeholder="Numero de identificacion"/>
@@ -85,7 +86,9 @@
 											<input name="ciudad"  id = "ciudad" type="text" placeholder="Ciudad" />
 											<button type="button" class="btn btn-default" onclick="vincular()">Vincular Datos</button>
 											</form>
-											</div>'
+											</div>
+											</div>
+											'
 											;
 			                    }
 			                    

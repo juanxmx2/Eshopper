@@ -46,7 +46,7 @@
 		<div class="container">
 
 			<div class="col-x-2">
-			<iframe width="23%" height="200%" frameborder="0" align="left" id="derecho" name="derecho" src="../Principales/frame_derecho.php"></iframe>
+			<iframe class ="mainmenu pull-left" width="23%" height="200%" frameborder="0" align="left" id="derecho" name="derecho" src="../Principales/frame_derecho.php"></iframe>
 	
 			<div class="row">				
 				<div class="col-sm-9 padding-right">

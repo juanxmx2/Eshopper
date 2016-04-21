@@ -25,7 +25,7 @@
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->       
-    <link rel="shortcut icon" href="../../images/ico/favicon.ico">
+    <link rel="shortcut icon" href="../../images/icon/disenarte.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../images/ico/apple-touch-icon-72-precomposed.png">
@@ -66,7 +66,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="front.php"><img src="../../images/home/logoD.png" alt ="Error 404" /></a>
+							<a href="front.php"><img src="../../images/home/logoD.png" alt ="Error 404"  width="100%" height="25%"/></a>
 						</div>
 						<div class="btn-group pull-right">
 							

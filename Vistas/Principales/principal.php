@@ -214,7 +214,7 @@
 											<p><b>".$tupla[0]."</b></p>
 											
 											</div>
-											<img src='../../images/product-details/new.png' class='new' alt='' />;
+											<img src='../../images/product-details/new.png' class='new' alt='' />
 												</div>
 											</div>
 										</div>
