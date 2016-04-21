@@ -92,6 +92,16 @@
 						</tr>";
 					}
 
+					if($cantidad == 0)
+					{
+						echo "
+								<td class='cart_description' align='center'>
+								<p align='center'>¡Su Carrito de Compras se encuentra Vacio!</p>
+								</td>
+
+						";
+					}
+
 					}
  					?>
 						
