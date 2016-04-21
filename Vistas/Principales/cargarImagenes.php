@@ -42,22 +42,6 @@
                             <div class="view-product">
                                 <!--<img src="../../images/product-details/1.jpg" alt="" /> -->
                               <?php 
-                           /*   $nombreArchivo = "";
-                              if (isset($_POST['submit'])) {  
-                              if(is_uploaded_file($_FILES['fichero']['tmp_name'])) { // verifica haya sido cargado el archivo 
-                             
-                              $nombreArchivo = $_FILES["fichero"]["name"];
-                              echo "<img src='../../images/product-details/".$nombreArchivo."' width='250px' height='250px'/>";
-                              echo "<h3>Nuevo</h3>";
-
-                          
-                               } 
-                               else
-                               {
-                                echo "Por favor seleccione un archivo";
-                               }
-                               } 
-                            */  
                               if (isset($_POST['crear'])) {
                               $directorio = '../../images/product-details/';
                               $archivo = $directorio . basename($_FILES['fichero']['name']);  // se coloca en su lugar final
@@ -80,39 +64,6 @@
 
                               ?>
                             </div>
-                           
-                            <!-- Wrapper for slides 
-                            <div id="similar-product" class="carousel slide" data-ride="carousel">
-                                                                  
-                                        <div class="carousel-inner">
-                                        <div class="item active">
-                                          <a href=""><img src="../../images/product-details/similar1.jpg" alt=""></a>
-                                          <a href=""><img src="../../images/product-details/similar2.jpg" alt=""></a>
-                                          <a href=""><img src="../../images/product-details/similar3.jpg" alt=""></a>
-                                        </div>
-                                        <div class="item">
-                                          <a href=""><img src="../../images/product-details/similar1.jpg" alt=""></a>
-                                          <a href=""><img src="../../images/product-details/similar2.jpg" alt=""></a>
-                                          <a href=""><img src="../../images/product-details/similar3.jpg" alt=""></a>
-                                        </div>
-                                        <div class="item">
-                                          <a href=""><img src="../../images/product-details/similar1.jpg" alt=""></a>
-                                          <a href=""><img src="../../images/product-details/similar2.jpg" alt=""></a>
-                                          <a href=""><img src="../../images/product-details/similar3.jpg" alt=""></a>
-                                        </div>
-                                        
-                                    </div>
-                                
-                                  <!-- Controls 
-
-                                  <a class="left item-control" href="#similar-product" data-slide="prev">
-                                    <i class="fa fa-angle-left"></i>
-                                  </a>
-                                  <a class="right item-control" href="#similar-product" data-slide="next">
-                                    <i class="fa fa-angle-right"></i>
-                                  </a>
-                            </div>
-                          -->
                         </div>
                         <section id="form2"><!--form-->
                                 <div class="col-sm-7 col-sm-offset-1">
@@ -127,7 +78,7 @@
                                 <input name="precio" id = "precio" type="number" placeholder="Precio" />
                                 <input name="cantidad" id = "cantidad" type="number" placeholder="Cantidad" />
                                  <select id="categoria" name="categoria" placeholder ="Categoria" >
-                                <option></option>
+                                <option>Seleccione una opción</option>
                                 <?php
                                 $producto->cargar_categoria();
 

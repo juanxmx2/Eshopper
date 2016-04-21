@@ -35,7 +35,7 @@
     <script src="../../Scripts/Usuarios/CerrarSesion.js"> </script>	
 </head><!--/head-->
 
-<body >
+<body class ="body-front">
 	<header id="header"><!--header-->
 				
 		<div class="header-middle"><!--header-middle-->
@@ -43,23 +43,12 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="front.php"><img src="../../images/home/logoD.png" alt ="Error 404"  width="100%" height="25%"/></a>
+							<a href="front.php"><img src="../../images/home/logos.png" alt ="Error 404"  width="40%" height="40%"/></a>
 						</div>
-						<div class="btn-group pull-right">
-							
-							<div class="btn-group">
-								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-									Moneda
-									<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu">
-									<li><a href="#">Dolar USD</a></li>
-									<li><a href="#">Pesos $</a></li>
-								</ul>
-							</div>
 						</div>
-					</div>
+
 					<div class="col-sm-8">
+
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
 								<li ><a><i></i>
@@ -120,6 +109,19 @@
 								<span class="icon-bar"></span>
 							</button>
 						</div>
+						<div class="btn-group pull-right">
+							
+							<div class="btn-group">
+								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
+									Moneda
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a href="#">Dolar USD</a></li>
+									<li><a href="#">Pesos $</a></li>
+								</ul>
+							</div>
+						</div>
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="front.php" class="active">Inicio</a></li>
@@ -152,8 +154,8 @@
 	</header><!--/header-->
 
 	
-	<div class="col-xs-12">
-                <div class="col-x-2">
+	<div>
+                <div>
                       	
                     <iframe width="100%" height="100%" frameborder="0" align="top" id="principal" name="principal" src="../Principales/principal.php"></iframe>
                 </div>

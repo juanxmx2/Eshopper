@@ -75,9 +75,9 @@
 							</td>
 							<td class='cart_quantity'>
 								<div class='cart_quantity_button'>
-									<a class='cart_quantity_up' href='#' id='".$tupla[0]."' onclick='aumentarCantidad(".$tupla[2].",this.id)'> + </a>
+									<a class='cart_quantity_up' href='javascript:void(0);' id='".$tupla[0]."' onclick='aumentarCantidad(".$tupla[2].",this.id)'> + </a>
 									<input class='cart_quantity_input' type='text' name='cantidad' id='cantidad".$tupla[0]."' value='1' autocomplete='off' size='2' min='0' onBlur='perdidaFocus(".$tupla[0].")'>
-									<a class='cart_quantity_down' href='#' id='".$tupla[0]."' onclick='disminuirCantidad(".$tupla[2].", this.id)'> - </a>
+									<a class='cart_quantity_down' href='javascript:void(0);' id='".$tupla[0]."' onclick='disminuirCantidad(".$tupla[2].", this.id)'> - </a>
 								</div>
 							</td>
 							<td class='cart_total'>
