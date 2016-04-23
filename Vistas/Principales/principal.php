@@ -140,7 +140,7 @@
 									<div class='product-image-wrapper'>
 										<div class='single-products'>
 											<div class='productinfo text-center'>
-												<img src='".$imagen."' width='350px' height='300px' />
+												<img src='".$imagen."' width='150px' height='200px' />
 											<h2>$".number_format($tupla2[2], 2, ",", ".")."</h2>
 											<b>".$tupla2[0]."</b>
 											<p><b>Ref. </b> ".$tupla2[1]."</p>
@@ -197,7 +197,7 @@
 											<div class='product-image-wrapper'>
 											<div class='single-products'>
 											<div class='productinfo text-center'>
-											<img src='".$imagen."' width='350px' height='300px' />
+											<img src='".$imagen."' width='150px' height='200px' />
 											<h2>$".number_format($tupla[2], 2, ",", ".")."</h2>
 											<p><b>".$tupla[0]."</b></p>
 											
